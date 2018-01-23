@@ -157,8 +157,7 @@ parameters:
   value: rhdm70-dev
   required: false
 - displayName: Context Directory
-  description: Path within the Git project where your source must be built. This must be the location of the pom.xml 
-    file. Empty for root project directory.
+  description: Locationof the module to build (pom.xml file) in the Git project. Empty for root project directory.
   name: CONTEXT_DIR
   value: quickstarts/hello-rules/hellorules
   required: false
@@ -208,7 +207,7 @@ parameters:
    and any other necessary files) after a successful Maven build. Files from the artefact directory are copied
    into the deployment folder. If this parameter is not specified, all archives in /target are copied.
   name: ARTIFACT_DIR
-  displayName: Artefact Directory
+  displayName: Artifact Directory
   value: ''
   required: false
 objects:
