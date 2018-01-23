@@ -35,7 +35,7 @@ parameters:
   required: false
 - displayName: KIE Server User
   description: KIE execution server user name. Use this user account for API calls to the Decision Server. 
-   (Sets the org.kie.server.user system property).
+    (Sets the org.kie.server.user system property).
   name: KIE_SERVER_USER
   value: executionUser
   required: false
@@ -47,7 +47,7 @@ parameters:
   required: false
 - displayName: KIE Server Bypass Auth User
   description: KIE execution server bypass auth user. If this parameter is set to true, the Decision Server accepts
-   API calls without user account information. (Sets the org.kie.server.bypass.auth.user system property).
+   API calls without user account authorization. (Sets the org.kie.server.bypass.auth.user system property).
   name: KIE_SERVER_BYPASS_AUTH_USER
   value: 'false'
   required: false
@@ -149,7 +149,7 @@ parameters:
   value: ''
   required: false
 - displayName: Maven repository user name
-  description: user name to access the Maven repository.
+  description: User name to access the Maven repository.
   name: MAVEN_REPO_USERNAME
   value: ''
   required: false

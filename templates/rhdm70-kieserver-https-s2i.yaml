@@ -40,8 +40,7 @@ parameters:
   value: controllerUser
   required: false
 - displayName: KIE Server Controller Password
-  description: KIE server controller password (sets the org.kie.server.controller.pwd
-    system property).
+  description: KIE server controller password (sets the org.kie.server.controller.pwd system property).
   name: KIE_SERVER_CONTROLLER_PWD
   from: "[a-zA-Z]{6}[0-9]{1}!"
   generate: expression
@@ -54,8 +53,8 @@ parameters:
   value: http
   required: false
 - displayName: KIE server controller service
-  description: KIE server controller service (Used to set the org.kie.server.controller
-    system property if host and port are not set).
+  description: KIE server controller service (Used to set the org.kie.server.controller system property 
+    if host and port are not set).
   name: KIE_SERVER_CONTROLLER_SERVICE
   value: ''
   required: false
@@ -73,9 +72,9 @@ parameters:
   name: KIE_SERVER_CONTROLLER_PORT
   example: '8080'
   required: false
-- displayName: KIE Server User.  
-  description: KIE execution server user name. Use this user account for API calls to the Decision Server. (Sets the 
-  org.kie.server.user system property).
+- displayName: KIE Server User  
+  description: KIE execution server user name. Use this user account for API calls to the Decision Server. 
+    (Sets the org.kie.server.user system property).
   name: KIE_SERVER_USER
   value: executionUser
   required: false
@@ -87,13 +86,13 @@ parameters:
   required: false
 - displayName: KIE Server Bypass Auth User
   description: KIE execution server bypass auth user. If this parameter is set to true, the Decision Server accepts
-   API calls without user account information. (Sets the org.kie.server.bypass.auth.user system property).
+   API calls without user account authorization. (Sets the org.kie.server.bypass.auth.user system property).
   name: KIE_SERVER_BYPASS_AUTH_USER
   value: 'false'
   required: false
 - displayName: KIE MBeans
-  description: KIE execution server MBeans enabled/disabled. These MBeans provide monitoring information. (Sets the kie.mbeans and
-    kie.scanner.mbeans system properties).
+  description: KIE execution server MBeans enabled/disabled. These MBeans provide monitoring information. (Sets the 
+    kie.mbeans and kie.scanner.mbeans system properties).
   name: KIE_MBEANS
   value: enabled
   required: false
@@ -156,7 +155,8 @@ parameters:
   value: rhdm70-dev
   required: false
 - displayName: Context Directory
-  description: Path within the Git project where your source must be built; empty for root project directory.
+  description: Path within the Git project where your source must be built. This must be the location of the pom.xml 
+    file. Empty for root project directory.
   name: CONTEXT_DIR
   value: quickstarts/hello-rules/hellorules
   required: false
@@ -193,7 +193,7 @@ parameters:
   value: ''
   required: false
 - displayName: Maven repository user name
-  description: user name to access the Maven repository.
+  description: User name to access the Maven repository.
   name: MAVEN_REPO_USERNAME
   value: ''
   required: false
@@ -202,11 +202,11 @@ parameters:
   name: MAVEN_REPO_PASSWORD
   value: ''
   required: false
-  displayName: Artefact Directory
 - description: The directory or several directories within the project that contains the required binary files (KJAR files 
    and any other necessary files) after a successful Maven build. Files from the artefact directory are copied
    into the deployment folder. If this parameter is not specified, all archives in /target are copied.
   name: ARTIFACT_DIR
+  displayName: Artefact Directory
   value: ''
   required: false
 objects:

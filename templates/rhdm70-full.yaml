@@ -12,8 +12,8 @@ metadata:
 labels:
   template: rhdm70-full-persistent
   xpaas: 1.4.0
-message: A new persistent Decision Manager applications have been created in your project.
-  The user name/password for accessing the Decision Server / Decision Central interface is ${KIE_ADMIN_USER}/${KIE_ADMIN_PWD}.
+message: New persistent Decision Central and Decision Server applications have been created in your project.
+  The user name/password for accessing the Decision Central interface is ${KIE_ADMIN_USER}/${KIE_ADMIN_PWD}.
   Please be sure to create the "decisioncentral-service-account" and "kieserver-service-account" service accounts
   and the secrets named "${DECISION_CENTRAL_HTTPS_SECRET}" and "${KIE_SERVER_HTTPS_SECRET}" containing the
   ${DECISION_CENTRAL_HTTPS_KEYSTORE} and ${KIE_SERVER_HTTPS_KEYSTORE}files used for serving secure content.
@@ -46,7 +46,7 @@ parameters:
   from: "[a-zA-Z]{6}[0-9]{1}!"
   generate: expression
   required: false
-- displayName: KIE Server Controller User. 
+- displayName: KIE Server Controller User
   description: KIE server controller user name. The Decision Server uses this user account to log on to 
     Decision Central. (Sets the org.kie.server.controller.user system property).
   name: KIE_SERVER_CONTROLLER_USER
@@ -58,8 +58,9 @@ parameters:
   from: "[a-zA-Z]{6}[0-9]{1}!"
   generate: expression
   required: false
-- displayName: KIE Server User. Use this user account for API calls to the Decision Server. 
-  description: KIE execution server user name (sets the org.kie.server.user system property).
+- displayName: KIE Server User
+  description: KIE execution server user name. Use this user account for API calls to the Decision Server. 
+    (Sets the org.kie.server.user system property).
   name: KIE_SERVER_USER
   value: executionUser
   required: false
@@ -71,7 +72,7 @@ parameters:
   required: false
 - displayName: KIE Server Bypass Auth User
   description: KIE execution server bypass auth user. If this parameter is set to true, the Decision Server accepts
-   API calls without user account information. (Sets the org.kie.server.bypass.auth.user system property).
+   API calls without user account authorization. (Sets the org.kie.server.bypass.auth.user system property).
   name: KIE_SERVER_BYPASS_AUTH_USER
   value: 'false'
   required: false
@@ -173,7 +174,7 @@ parameters:
   value: adminUser
   required: false
 - displayName: Maven repository password
-  description: Password to access the Maven repository. Decision Server uses the Decision Central repository, 
+  description: Password to access the Maven repository. If Decision Server uses the Decision Central repository, 
     this parameter must match the KIE Admin Password. No default specified.
   name: MAVEN_REPO_PASSWORD
   required: false
