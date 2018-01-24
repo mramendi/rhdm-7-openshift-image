@@ -71,8 +71,9 @@ parameters:
     set the org.kie.server.controller system property).
   value: http
   required: false
+  description: KIE server controller service (used to set the org.kie.server.controller system property if host and port 
+    are not set).
 - displayName: KIE server controller service
-  description: KIE server controller service (Used to set the org.kie.server.controller system property if host and port aren't set).
   name: KIE_SERVER_CONTROLLER_SERVICE
   value: ''
   required: false

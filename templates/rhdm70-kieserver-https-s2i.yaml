@@ -55,8 +55,8 @@ parameters:
   value: http
   required: false
 - displayName: KIE server controller service
-  description: KIE server controller service (Used to set the org.kie.server.controller system property 
-    if host and port are not set).
+  description: KIE server controller service (used to set the org.kie.server.controller system property if host and port 
+    are not set).
   name: KIE_SERVER_CONTROLLER_SERVICE
   value: ''
   required: false
@@ -106,13 +106,13 @@ parameters:
   name: DROOLS_SERVER_FILTER_CLASSES
   value: 'true'
   required: false
-- displayName: Execution Server Custom http Route Hostname
+- displayName: Decision Server Custom http Route Hostname
   description: 'Custom hostname for http service route.  Leave blank for default hostname,
     example: <application-name>-execserv-<project>.<default-domain-suffix>'
   name: EXECUTION_SERVER_HOSTNAME_HTTP
   value: ''
   required: false
-- displayName: Execution Server Custom https Route Hostname
+- displayName: Decision Server Custom https Route Hostname
   description: 'Custom hostname for https service route.  Leave blank for default hostname, 
     example: secure-<application-name>-execserv-<project>.<default-domain-suffix>'
   name: EXECUTION_SERVER_HOSTNAME_HTTPS
@@ -157,7 +157,7 @@ parameters:
   value: rhdm70-dev
   required: false
 - displayName: Context Directory
-  description: Locationof the module to build (pom.xml file) in the Git project. Empty for root project directory.
+  description: Location of the module to build (pom.xml file) in the Git project. Empty for root project directory.
   name: CONTEXT_DIR
   value: quickstarts/hello-rules/hellorules
   required: false
@@ -184,7 +184,7 @@ parameters:
 - displayName: Maven mirror URL
   description: Maven mirror to use for S2I builds. If the Maven build of your decision service pulls packages 
     from a Maven repository, you can set this parameter. In this case, the build process will pull packages 
-    from the mirror repository instead of the configured original repository
+    from the mirror repository instead of the configured original repository.
   name: MAVEN_MIRROR_URL
   value: ''
   required: false
@@ -205,7 +205,8 @@ parameters:
   required: false
 - description: The directory or several directories within the project that contains the required binary files (KJAR files 
    and any other necessary files) after a successful Maven build. Files from the artefact directory are copied
-   into the deployment folder. If this parameter is not specified, all archives in /target are copied.
+   into the deployment folder. Use a comma (,) to separate multiple directories. If this parameter is not specified, all 
+   archives in /target are copied.
   name: ARTIFACT_DIR
   displayName: Artifact Directory
   value: ''
