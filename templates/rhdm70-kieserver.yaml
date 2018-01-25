@@ -73,7 +73,10 @@ parameters:
   required: false
   description: KIE server controller service (used to set the org.kie.server.controller system property if host and port 
     are not set).
-- displayName: KIE server controller service
+- displayName: KIE server controller service. To use Decision Central that is hosted on the same OpenShift environment
+    to manage this Decision Server, set this variable to the OpenShift service name for the Decision Central. In this
+    case, do not set the KIE server controller protocol, KIE server controller host, and KIE server controller port.
+    (Sets the org.kie.server.controller system property if host and port are not set). 
   name: KIE_SERVER_CONTROLLER_SERVICE
   value: ''
   required: false
