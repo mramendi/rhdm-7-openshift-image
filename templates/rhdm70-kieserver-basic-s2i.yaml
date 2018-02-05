@@ -35,7 +35,7 @@ parameters:
   required: false
 - displayName: KIE Server Controller User
   description: KIE server controller user name. The Decision Server uses this user account to log on to Decision 
-    Central or a management console. (Sets the org.kie.server.controller.user system property).
+    Central or a controller. (Sets the org.kie.server.controller.user system property).
   name: KIE_SERVER_CONTROLLER_USER
   value: controllerUser
   required: false
@@ -47,8 +47,8 @@ parameters:
   generate: expression
   required: false
 - displayName: KIE server controller protocol
-  description: KIE server controller protocol. To use Decision Central or a management console to manage this Decision
-    Server, set this parameter to the protocol part of the URL for the Decision Central or management console. (Used to 
+  description: KIE server controller protocol. To use Decision Central or a controller to manage this Decision
+    Server, set this parameter to the protocol part of the URL for the Decision Central or controller. (Used to 
     set the org.kie.server.controller system property).
   name: KIE_SERVER_CONTROLLER_PROTOCOL
   value: http
@@ -62,15 +62,15 @@ parameters:
   value: ''
   required: false
 - displayName: KIE server controller host
-  description: KIE server controller host. To use Decision Central or a management console to manage this Decision
-    Server, set this parameter to the host part of the URL for the Decision Central or management console. (Used to 
+  description: KIE server controller host. To use Decision Central or a controller to manage this Decision
+    Server, set this parameter to the host part of the URL for the Decision Central or controller. (Used to 
     set the org.kie.server.controller system property).
   name: KIE_SERVER_CONTROLLER_HOST
   example: my-app-controller-ocpuser.os.example.com
   required: false
 - displayName: KIE server controller port
-  description: KIE server controller port. To use Decision Central or a management console to manage this Decision
-    Server, set this parameter to the port part of the URL for the Decision Central or management console. (Used to 
+  description: KIE server controller port. To use Decision Central or a controller to manage this Decision
+    Server, set this parameter to the port part of the URL for the Decision Central or controller. (Used to 
     set the org.kie.server.controller system property).
   name: KIE_SERVER_CONTROLLER_PORT
   example: '8080'
